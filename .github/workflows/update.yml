@@ -1,0 +1,30 @@
+name: Atualizar Dados
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Executa semanalmente aos domingos
+  workflow_dispatch: # Permite execução manual pela aba Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar ambiente Python/Node (se necessário)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Executar script de coleta ou validação
+        run: |
+          # python scripts/coletar_dados.py
+          echo "Executando verificação de dados públicos..."
+
+      - name: Commit e push das alterações automáticas
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --cached --quiet || (git commit -m "Atualização automática de dados públicos" && git push)
