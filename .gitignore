@@ -1,0 +1,15 @@
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos temporários e de edição
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Planilhas ou dumps de dados brutos locais (opcional, caso não queira versionar dados sensíveis ou gigantescos)
+*.tmp
+*.log
