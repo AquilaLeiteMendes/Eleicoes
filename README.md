@@ -11,4 +11,4 @@ Repositório de informações sobre políticos para acesso público.
 
 ## Objetivo
 
-Centralizar e disponibilizar **dados políticos de forma organizada**, facilitando o acesso a informações sobre representantes eleitos, com foco inicial em **listas de prefeitos**.
+Centralizar e disponibilizar **dados políticos de forma organizada**, facilitando o acesso a informações sobre representantes eleitos.
